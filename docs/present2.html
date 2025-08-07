@@ -1,9 +1,114 @@
-<h1>내가 받고 싶은 선물</h1>
-
-<img src="image/tesla.jpg">
-<ul>
-    <li>
-        <a href=https://www.tesla.com target="_blank">구입링크</a>
-    </li>
-    <li>가격: 약 5299만원</li>
-</ul>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>내가 받고 싶은 선물</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #f7b42c 0%, #fc575e 100%);
+            font-family: 'Montserrat', 'Malgun Gothic', Arial, sans-serif;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 48px auto;
+            background: rgba(255,255,255,0.92);
+            border-radius: 24px;
+            box-shadow: 0 12px 32px rgba(252,87,94,0.18);
+            padding: 36px 28px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -40px; left: -40px;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, #fc575e 60%, transparent 100%);
+            opacity: 0.18;
+            z-index: 0;
+        }
+        h1 {
+            color: #fc575e;
+            font-size: 2.4em;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            font-weight: 900;
+            text-shadow: 0 2px 8px #fff6;
+        }
+        .emoji {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+            animation: bounce 1.2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-12px);}
+        }
+        img {
+            width: 85%;
+            max-width: 340px;
+            border-radius: 18px;
+            box-shadow: 0 6px 24px rgba(252,87,94,0.18);
+            margin-bottom: 22px;
+            border: 3px solid #f7b42c;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            font-size: 1.18em;
+            margin-bottom: 14px;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #fc575e 60%, #f7b42c 100%);
+            color: #fff;
+            font-weight: bold;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            box-shadow: 0 4px 16px #fc575e44;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px #fc575e66;
+            background: linear-gradient(90deg, #f7b42c 60%, #fc575e 100%);
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 16px #fc575e44;}
+            50% { box-shadow: 0 8px 32px #fc575e88;}
+        }
+        .price {
+            font-size: 1.25em;
+            color: #f7b42c;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    </style>
+    <!-- 구글 폰트 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🚗✨</div>
+        <h1>내가 받고 싶은 선물</h1>
+        <img src="image/tesla.jpg" alt="테슬라 자동차">
+        <ul>
+            <li>
+                <a class="btn" href="https://www.tesla.com" target="_blank">테슬라 구입링크</a>
+            </li>
+            <li class="price">가격: 약 5,299만원</li>
+        </ul>
+    </div>
+</body>
+</html>
